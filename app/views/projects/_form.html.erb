@@ -1,0 +1,23 @@
+<div class="project">
+    <%= form_for(@project) do |f| %>
+      <div class="form-control">
+        <%= f.label :name %>
+        <%= f.text_field :name, :placeholder => 'No more than 100 characters' %>
+      </div>
+      <div class="form-control">
+        <%= f.label :summary %>
+        <%= f.text_field :summary, :placeholder => 'No more than 5000 characters' %>
+      </div>
+      <div class="form-control">
+        <%= f.label :start_date %>
+        <%= f.text_field :name, :placeholder => 'mm/dd/yyyy' %>
+      </div>
+      <div class="form-control">
+        <%= f.label :end_date %>
+        <%= f.text_field :name, :placeholder => 'mm/dd/yyyy' %>
+      </div>
+      <div class="form-control">
+        <%= f.submit "Save" %>
+      </div>
+    <% end %>
+</div>
