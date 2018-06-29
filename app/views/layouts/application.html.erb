@@ -10,8 +10,19 @@
   </head>
 
   <body>
-    <%= link_to 'All projects', projects_path %>
-    <%= link_to 'New project', new_project_path %>
-    <%= yield %>
+    <div class="container">
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <a class="navbar-brand" href="<%= projects_path %>">All Projects</a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">All Tasks</a>
+          </li>
+        </ul>
+        <%= link_to 'New Project', new_project_path, class: 'btn btn-outline-primary pull-xs-right' %>
+      </nav>
+    </div>
+    <div class="container main">
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,1 +1,6 @@
-<h2><%= link_to project.name, project_path(project) %></h2>
+<article class="project">
+  <section class="name">
+    <h2><%= link_to project.name, project_path(project) %></h2>
+    <small><%= project.start_date %> | <%= project.end_date %></small>
+  </section>
+</article>

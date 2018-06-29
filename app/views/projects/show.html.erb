@@ -1,10 +1,13 @@
-<h1><%= @project.name %></h1>
-<p>
-  <%= @project.start_date %> |
-  <%= @project.end_date %>
-</p>
+<article class="project">
+  <section class="name">
+    <h1><%= @project.name %></h1>
+    <small><%= @project.start_date %> | <%= @project.end_date %></small>
+  </section>
+  <section class="summary">
+    <p><%= @project.summary %></p>
+  </section>
+</article>
 <small>
-  <%= link_to 'Edit', edit_project_path(@project) %> |
-  <%= link_to 'Delete', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-success' %>
+  <%= link_to 'Delete', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
 </small>
-<p><%= @project.summary %></p>
