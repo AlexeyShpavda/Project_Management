@@ -1,4 +1,6 @@
 class Task < ApplicationRecord
+  has_and_belongs_to_many :projects
+
   validates :title, :description, :status, presence: true
   validates :title, uniqueness: true, length: { maximum: 100 }
   validates :description, length: { maximum: 5000 }
