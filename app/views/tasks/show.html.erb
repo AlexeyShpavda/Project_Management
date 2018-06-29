@@ -1,0 +1,13 @@
+<article class="task">
+  <section class="title">
+    <h1><%= @task.title %></h1>
+    <p><%= @task.status %></p>
+  </section>
+  <section class="description">
+    <p><%= @task.description %></p>
+  </section>
+</article>
+<small>
+  <%= link_to 'Edit', edit_task_path(@task), class: 'btn btn-success' %>
+  <%= link_to 'Delete', task_path(@task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+</small>

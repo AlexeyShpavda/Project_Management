@@ -30,7 +30,7 @@ class TasksController < ApplicationController
   def destroy
     @task.destroy
 
-    redirect_to tasks_path
+    redirect_to projects_path
   end
 
   private
@@ -39,6 +39,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:recipe).permit(:title, :description, :status)
+    params.require(:task).permit(:title, :description, :status)
   end
 end
