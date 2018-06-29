@@ -11,9 +11,12 @@
 
   <body>
     <div class="container">
-      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <nav class="navbar navbar-toggleable-md" style="background-color: #e3f2fd;">
         <a class="navbar-brand" href="<%= projects_path %>">All Projects</a>
-        <%= link_to 'New Project', new_project_path, class: 'btn btn-outline-primary pull-xs-right' %>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <%= link_to 'New Task', new_task_path, class: 'btn btn-primary' %>
+          <%= link_to 'New Project', new_project_path, class: 'btn btn-primary' %>
+        </div>
       </nav>
     </div>
     <div class="container main">
