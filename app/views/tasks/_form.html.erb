@@ -24,6 +24,14 @@
       <%= f.text_field :status, :placeholder => 'new, in progress, done', class: 'form-control' %>
     </div>
     <div class="form-group">
+      <p>Select developers</p>
+      <%= hidden_field_tag "task[user_ids][]", nil %>
+      <% User.all.each do |user| %>
+        <%= check_box_tag "task[user_ids][]", user.id, @task.users.ids.include?(user.id) %>
+        <%= label_tag dom_id(user), user.email %> <br>
+      <% end %>
+    </div>
+    <div class="form-group">
       <%= f.submit "Save", class: 'btn btn-primary' %>
       <%= link_to "Back", :back, class: 'btn btn-outline-secondary' %>
     </div>

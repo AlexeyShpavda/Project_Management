@@ -28,6 +28,7 @@
         <%= f.text_field :name, :placeholder => 'mm/dd/yyyy', class: 'form-control' %>
       </div>
       <div class="form-group">
+        <p>Select tasks</p>
         <%= hidden_field_tag "project[task_ids][]", nil %>
         <% Task.all.each do |task| %>
           <%= check_box_tag "project[task_ids][]", task.id, @project.tasks.ids.include?(task.id) %>
